@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="layout-container">
+      <header class="site-title">My first hands-on web design</header>
+      <nav>
+        <ul class="layout-nav">
+          <li class="nav-link"><a href="/">Home</a></li>
+          <li class="nav-link"><a href="/">About</a></li>
+          <li class="nav-link"><a href="/">Blog</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1 class="post-heading">Post title</h1>
+        <p>Nov 15, 2023</p>
+        <div class="image-wrapper">
+          <img src="https://picsum.photos/500/300" alt="random image" />
+        </div>
+        <p>Photo Credit: Picsum</p>
+        <p>This is my first blog post! Isn't it great?</p>
+        <p>Some of my favorite things are:</p>
+        <ul>
+          <li>Petting dogs</li>
+          <li>Singing</li>
+          <li>Eating potato-based foods</li>
+        </ul>
+      </main>
+    </div>
+    <form>
+      <textarea rows="25" cols="25" id="style-input"></textarea>
+    </form>
+    <script>
+      document
+        .getElementById("style-input")
+        .addEventListener("input", function (e) {
+          document.querySelector("style").innerHTML = e.target.value;
+          document.querySelector("h2").innerText = e.target.value;
+        });
+    </script>
+  </body>
+</html>
